@@ -10,7 +10,8 @@ export default class Teacher extends Person {
         this._students = [...value]
     }
 
-    constructor(students){
-        this.students = students
+    constructor(options){
+        super(options)
+        this.students = options?.students ? options.students : []
     }
 }
